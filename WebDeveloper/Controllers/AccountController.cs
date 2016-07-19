@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebDeveloper.Models;
+using u = WebDeveloper.Utils;
 
 namespace WebDeveloper.Controllers
 {
@@ -78,6 +79,7 @@ namespace WebDeveloper.Controllers
             if (ModelState.IsValid)
             {
                 var user = await UserManager.FindByNameAsync(model.Email);
+
                 if (user == null || !(await UserManager.IsEmailConfirmedAsync(user.Id)))
                 {
                     return View("ForgotPasswordConfirmation");

@@ -26,5 +26,22 @@ namespace WebDeveloper.DataAccess
                 return dbContext.EmailAddress.Where(em=> em.BusinessEntityID==id).ToList();
             }
         }
+
+        public Person GetPerson(int id)
+        {
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.Person.FirstOrDefault(x => x.BusinessEntityID == id);
+            }
+        }
+
+        public BusinessEntity GetBusinessEntity(int id)
+        {
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.BusinessEntity.FirstOrDefault(x => x.BusinessEntityID == id);
+            }
+        }
+
     }
 }

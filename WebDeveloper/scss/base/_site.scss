@@ -7,9 +7,9 @@ footer {
     background: $site-color-black;
     color: $site-color-white;
     height: 100px;
-    position: absolute;    
+    position: absolute;
     width: 100%;
-    display:inline-block;
+    display: inline-block;
     /*    
     left: 0;
     right: 0;
@@ -18,12 +18,17 @@ footer {
     text-align: center;
 }
 
-section{
+section {
     display: inline-block;
 }
 
-.body-content{
+.body-content {
     display: block;
+}
+
+.title-modal {
+    padding-left: 2rem;
+    font-weight: 200;
 }
 
 /*.modal-content {
@@ -75,17 +80,20 @@ section{
 
 .modal {
 }
+
 .vertical-alignment-helper {
-    display:table;
+    display: table;
     height: 100%;
     width: 100%;
 }
+
 .vertical-align-center {
     /* To center vertically */
     display: table-cell;
     vertical-align: middle;
 }
-.modal-content {    
+
+.modal-content {
     background-color: $site-color-white;
     margin-top: 2rem;
 }

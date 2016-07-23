@@ -21,6 +21,10 @@ section {
 .body-content {
   display: block; }
 
+.title-modal {
+  padding-left: 2rem;
+  font-weight: 200; }
+
 /*.modal-content {
     width: 600px !important;
     margin: 30px auto !important;

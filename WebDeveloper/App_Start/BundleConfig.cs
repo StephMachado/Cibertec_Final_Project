@@ -28,6 +28,35 @@ namespace WebDeveloper
                       "~/Content/bootstrap.css")
                       .Include("~/Css/site.css")
                       .Include("~/Content/bootstrap-datepicker.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/datepicker")
+                .Include("~/Scripts/moment.js")
+                .Include("~/Scripts/bootstrap-datetimepicker.js")
+                );
+
+            bundles.Add(new ScriptBundle("~/bundles/custom")
+                            .Include("~/Scripts/Shared/modal.js")
+                            );
+
+            bundles.Add(new ScriptBundle("~/bundles/Personal")
+               .Include("~/Scripts/Personal/functions.js")
+               );
+
+            bundles.Add(new StyleBundle("~/Content/datepicker")
+                .Include("~/Css/datepicker.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css")
+                      .Include("~/Css/site.css"));
+
+            bundles.Add(new DynamicFolderBundle("js", "*.js", false, new JsMinify()));
+            bundles.Add(new DynamicFolderBundle("css", "*.css", false, new CssMinify()));
+
+            #if DEBUG
+            BundleTable.EnableOptimizations = false;
+            #else
+            BundleTable.EnableOptimizations = true;
+            #endif
         }
     }
 }

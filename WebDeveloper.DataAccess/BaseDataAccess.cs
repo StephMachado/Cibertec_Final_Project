@@ -41,5 +41,21 @@ namespace WebDeveloper.DataAccess
             }
         }
 
+        public int Count()
+        {
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.Set<T>().Count();
+            }
+        }
+
+        public IEnumerable<T> GetListByPage(int pageNumber, int rows)
+        {
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.Set<T>().Page(pageNumber, rows);
+            }
+        }
+
     }
 }

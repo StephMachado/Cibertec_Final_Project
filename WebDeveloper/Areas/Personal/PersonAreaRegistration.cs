@@ -2,15 +2,9 @@
 
 namespace WebDeveloper.Areas.Personal
 {
-    public class PersonalAreaRegistration : AreaRegistration 
+    public class PersonAreaRegistration : AreaRegistration 
     {
-        public override string AreaName 
-        {
-            get 
-            {
-                return "Personal";
-            }
-        }
+        public override string AreaName => "Personal";
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
@@ -18,6 +12,12 @@ namespace WebDeveloper.Areas.Personal
                 "Personal_default",
                 "Personal/{action}/{id}",
                 new { controller="Personal", action = "Index", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "Address_default",
+                "Address/{action}/{id}",
+                new { controller = "Address", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

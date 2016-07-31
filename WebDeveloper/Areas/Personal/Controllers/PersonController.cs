@@ -50,28 +50,6 @@ namespace WebDeveloper.Areas.Personal.Controllers
             _personalRepository.Add(person);
             return RedirectToAction("Index");
         }
-       
-        public PartialViewResult Edit(int? id)
-        {
-            if (!id.HasValue) return null;
-            Person person = _personalRepository.GetPerson(id.Value);
-            if (person == null) return null;
-            return PartialView("_Edit", person);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Person person)
-        {
-            if (!ModelState.IsValid) return PartialView("_Edit", person);
-            person.ModifiedDate = DateTime.Now;
-            person.BusinessEntity = _personalRepository.GetBusinessEntity(person.BusinessEntityID);
-            {
-                person.BusinessEntity.ModifiedDate = person.ModifiedDate;
-            };
-            _personalRepository.Update(person);
-            return RedirectToAction("Index");
-        }
 
     }
 }

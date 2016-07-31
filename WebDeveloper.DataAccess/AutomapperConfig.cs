@@ -21,15 +21,17 @@ namespace WebDeveloper.DataAccess
 
         private static MapperConfiguration SetAutomapperConfig()
         {
+            //Utilizando el patrón singleton, por eso es static
             lock (padlock)
             {
+                //Se cumple mientras _config sea null (Solo lo realiza en la primera llamada)
                 return _config ?? new MapperConfiguration(cfg =>
                 {
                     cfg.CreateMap<Person, PersonModelView>();
+                    cfg.CreateMap<Address, AddressModelView>();
                 });
             }
         }
-
 
         public static IEnumerable<R> GetGeneric<T, R>(IEnumerable<T> claimList)
         {

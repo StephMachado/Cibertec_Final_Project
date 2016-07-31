@@ -26,7 +26,7 @@ namespace WebDeveloper.Areas.Personal.Controllers
             return View(_addressRepository.GetListDto());
         }
 
-        public ActionResult Prueba2()
+        public ActionResult Prueba4()
         {
         }
 

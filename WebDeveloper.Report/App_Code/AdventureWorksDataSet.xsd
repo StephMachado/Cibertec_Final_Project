@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdventureWorksDataSet" targetNamespace="http://tempuri.org/AdventureWorksDataSet.xsd" xmlns:mstns="http://tempuri.org/AdventureWorksDataSet.xsd" xmlns="http://tempuri.org/AdventureWorksDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="WebDeveloperConnectionString (WebDeveloper)" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vStateProvinceCountryRegionTableAdapter" Name="vStateProvinceCountryRegion">
+            <MainSource>
+              <DbSource ConnectionRef="WebDeveloperConnectionString (WebDeveloper)" DbObjectName="AdventureWorks.Person.vStateProvinceCountryRegion" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT StateProvinceID, StateProvinceCode, IsOnlyStateProvinceFlag, StateProvinceName, TerritoryID, CountryRegionCode, CountryRegionName FROM Person.vStateProvinceCountryRegion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StateProvinceID" DataSetColumn="StateProvinceID" />
+              <Mapping SourceColumn="StateProvinceCode" DataSetColumn="StateProvinceCode" />
+              <Mapping SourceColumn="IsOnlyStateProvinceFlag" DataSetColumn="IsOnlyStateProvinceFlag" />
+              <Mapping SourceColumn="StateProvinceName" DataSetColumn="StateProvinceName" />
+              <Mapping SourceColumn="TerritoryID" DataSetColumn="TerritoryID" />
+              <Mapping SourceColumn="CountryRegionCode" DataSetColumn="CountryRegionCode" />
+              <Mapping SourceColumn="CountryRegionName" DataSetColumn="CountryRegionName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdventureWorksDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vStateProvinceCountryRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StateProvinceID" type="xs:int" />
+              <xs:element name="StateProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsOnlyStateProvinceFlag" type="xs:boolean" />
+              <xs:element name="StateProvinceName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TerritoryID" type="xs:int" />
+              <xs:element name="CountryRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryRegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vStateProvinceCountryRegion" />
+      <xs:field xpath="mstns:StateProvinceID" />
+      <xs:field xpath="mstns:CountryRegionCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

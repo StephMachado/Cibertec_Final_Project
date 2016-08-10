@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace WebDeveloper.Model
 {
-    
-
+    [JsonObject]
     [Table("Person.BusinessEntityContact")]
     public partial class BusinessEntityContact
     {
@@ -29,10 +29,12 @@ namespace WebDeveloper.Model
 
         public DateTime ModifiedDate { get; set; }
 
+        [JsonProperty]
         public virtual BusinessEntity BusinessEntity { get; set; }
 
+        [JsonProperty]
         public virtual ContactType ContactType { get; set; }
-
+        [JsonIgnore]
         public virtual Person Person { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -40,22 +41,13 @@ namespace WebDeveloper.DataAccess
                 return dbContext.SaveChanges();
             }
         }
-
-        public int Count()
+        
+        public int count()
         {
             using (var dbContext = new WebContextDb())
             {
                 return dbContext.Set<T>().Count();
             }
         }
-
-        public IEnumerable<T> GetListByPage(int pageNumber, int rows)
-        {
-            using (var dbContext = new WebContextDb())
-            {
-                return dbContext.Set<T>().Page(pageNumber, rows);
-            }
-        }
-
     }
 }

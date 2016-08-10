@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdventureWorks2014DataSet" targetNamespace="http://tempuri.org/AdventureWorks2014DataSet.xsd" xmlns:mstns="http://tempuri.org/AdventureWorks2014DataSet.xsd" xmlns="http://tempuri.org/AdventureWorks2014DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="WebDeveloperConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WebDeveloperConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.WebDeveloperConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vStateProvinceCountryRegionTableAdapter" GeneratorDataComponentClassName="vStateProvinceCountryRegionTableAdapter" Name="vStateProvinceCountryRegion" UserDataComponentName="vStateProvinceCountryRegionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WebDeveloperConnectionString (Web.config)" DbObjectName="AdventureWorks2014.Person.vStateProvinceCountryRegion" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT StateProvinceID, StateProvinceCode, IsOnlyStateProvinceFlag, StateProvinceName, TerritoryID, CountryRegionCode, CountryRegionName FROM Person.vStateProvinceCountryRegion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StateProvinceID" DataSetColumn="StateProvinceID" />
+              <Mapping SourceColumn="StateProvinceCode" DataSetColumn="StateProvinceCode" />
+              <Mapping SourceColumn="IsOnlyStateProvinceFlag" DataSetColumn="IsOnlyStateProvinceFlag" />
+              <Mapping SourceColumn="StateProvinceName" DataSetColumn="StateProvinceName" />
+              <Mapping SourceColumn="TerritoryID" DataSetColumn="TerritoryID" />
+              <Mapping SourceColumn="CountryRegionCode" DataSetColumn="CountryRegionCode" />
+              <Mapping SourceColumn="CountryRegionName" DataSetColumn="CountryRegionName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdventureWorks2014DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AdventureWorks2014DataSet" msprop:Generator_UserDSName="AdventureWorks2014DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vStateProvinceCountryRegion" msprop:Generator_TableClassName="vStateProvinceCountryRegionDataTable" msprop:Generator_TableVarName="tablevStateProvinceCountryRegion" msprop:Generator_TablePropName="vStateProvinceCountryRegion" msprop:Generator_RowDeletingName="vStateProvinceCountryRegionRowDeleting" msprop:Generator_RowChangingName="vStateProvinceCountryRegionRowChanging" msprop:Generator_RowEvHandlerName="vStateProvinceCountryRegionRowChangeEventHandler" msprop:Generator_RowDeletedName="vStateProvinceCountryRegionRowDeleted" msprop:Generator_UserTableName="vStateProvinceCountryRegion" msprop:Generator_RowChangedName="vStateProvinceCountryRegionRowChanged" msprop:Generator_RowEvArgName="vStateProvinceCountryRegionRowChangeEvent" msprop:Generator_RowClassName="vStateProvinceCountryRegionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StateProvinceID" msprop:Generator_ColumnVarNameInTable="columnStateProvinceID" msprop:Generator_ColumnPropNameInRow="StateProvinceID" msprop:Generator_ColumnPropNameInTable="StateProvinceIDColumn" msprop:Generator_UserColumnName="StateProvinceID" type="xs:int" />
+              <xs:element name="StateProvinceCode" msprop:Generator_ColumnVarNameInTable="columnStateProvinceCode" msprop:Generator_ColumnPropNameInRow="StateProvinceCode" msprop:Generator_ColumnPropNameInTable="StateProvinceCodeColumn" msprop:Generator_UserColumnName="StateProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsOnlyStateProvinceFlag" msprop:Generator_ColumnVarNameInTable="columnIsOnlyStateProvinceFlag" msprop:Generator_ColumnPropNameInRow="IsOnlyStateProvinceFlag" msprop:Generator_ColumnPropNameInTable="IsOnlyStateProvinceFlagColumn" msprop:Generator_UserColumnName="IsOnlyStateProvinceFlag" type="xs:boolean" />
+              <xs:element name="StateProvinceName" msprop:Generator_ColumnVarNameInTable="columnStateProvinceName" msprop:Generator_ColumnPropNameInRow="StateProvinceName" msprop:Generator_ColumnPropNameInTable="StateProvinceNameColumn" msprop:Generator_UserColumnName="StateProvinceName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TerritoryID" msprop:Generator_ColumnVarNameInTable="columnTerritoryID" msprop:Generator_ColumnPropNameInRow="TerritoryID" msprop:Generator_ColumnPropNameInTable="TerritoryIDColumn" msprop:Generator_UserColumnName="TerritoryID" type="xs:int" />
+              <xs:element name="CountryRegionCode" msprop:Generator_ColumnVarNameInTable="columnCountryRegionCode" msprop:Generator_ColumnPropNameInRow="CountryRegionCode" msprop:Generator_ColumnPropNameInTable="CountryRegionCodeColumn" msprop:Generator_UserColumnName="CountryRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryRegionName" msprop:Generator_ColumnVarNameInTable="columnCountryRegionName" msprop:Generator_ColumnPropNameInRow="CountryRegionName" msprop:Generator_ColumnPropNameInTable="CountryRegionNameColumn" msprop:Generator_UserColumnName="CountryRegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vStateProvinceCountryRegion" />
+      <xs:field xpath="mstns:StateProvinceID" />
+      <xs:field xpath="mstns:CountryRegionCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

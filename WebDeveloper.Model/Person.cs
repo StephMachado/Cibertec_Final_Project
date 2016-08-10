@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace WebDeveloper.Model
 {
+    [JsonObject]
     [Table("Person.Person")]
     public partial class Person
     {
@@ -55,15 +57,19 @@ namespace WebDeveloper.Model
 
         public Guid rowguid { get; set; }
         
-
+        [JsonProperty]
         public virtual BusinessEntity BusinessEntity { get; set; }
-        
+
+        [JsonProperty]
         public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
 
+        [JsonProperty]
         public virtual ICollection<EmailAddress> EmailAddress { get; set; }
 
+        [JsonProperty]
         public virtual Password Password { get; set; }
 
+        [JsonProperty]
         public virtual ICollection<PersonPhone> PersonPhone { get; set; }
     }
 }

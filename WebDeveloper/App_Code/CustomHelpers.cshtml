@@ -10,5 +10,15 @@
                 </div>                
             </div>
         </div>
-    </div>
+    </div>    
+}
+
+@helper SetDatePicker() {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type='datetime']").datetimepicker({
+                showClose: true
+            });
+        });
+    </script>
 }

@@ -21,10 +21,8 @@ namespace WebDeveloper.DataAccess
 
         private static MapperConfiguration SetAutomapperConfig()
         {
-            //Utilizando el patrón singleton, por eso es static
             lock (padlock)
             {
-                //Se cumple mientras _config sea null (Solo lo realiza en la primera llamada)
                 return _config ?? new MapperConfiguration(cfg =>
                 {
                     cfg.CreateMap<Person, PersonModelView>();
@@ -33,10 +31,11 @@ namespace WebDeveloper.DataAccess
             }
         }
 
-        public static IEnumerable<R> GetGeneric<T, R>(IEnumerable<T> claimList)
+
+        public static IEnumerable<R> GetGeneric<T, R>(IEnumerable<T> objectList)
         {
             var mapper = _config.CreateMapper();
-            return mapper.Map<IEnumerable<T>, List<R>>(claimList);
+            return mapper.Map<IEnumerable<T>, List<R>>(objectList);
         }
 
         public static R GetGeneric<T, R>(T keyDocumentParent)

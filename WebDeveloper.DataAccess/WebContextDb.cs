@@ -13,6 +13,7 @@ namespace WebDeveloper.DataAccess
     {
         public WebContextDb() : base("WebDeveloperConnectionString")
         {
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Address> Address { get; set; }

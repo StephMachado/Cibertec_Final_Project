@@ -10,12 +10,14 @@ namespace WebDeveloper.DataAccess
 {
     public class AddressRepository : BaseDataAccess<Address>
     {
-        public IEnumerable<AddressModelView> GetListDto()
+        public List<AddressModelView> GetListDto()
         {
-            using (var dbContext = new WebContextDb())
+            using (var db =new WebContextDb())
             {
-                return Automapper.GetGeneric<IEnumerable<Address>, 
-                    List<AddressModelView>>(dbContext.Address.ToList().OrderByDescending(x => x.ModifiedDate).Take(10));
+                return Automapper.GetGeneric<List<Address>,
+                                             List<AddressModelView>>(
+                                            db.Address.Take(10).ToList()
+                                            );
             }
         }
     }

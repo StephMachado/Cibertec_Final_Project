@@ -4,31 +4,20 @@
 <div>
     <h4>Person</h4>
     <hr />
-    @Html.HiddenFor(model => model.rowguid)
-
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PersonType)
+            @Html.DisplayNameFor(model => model.BusinessEntityID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PersonType)
+            @Html.TextBoxFor(model => model.BusinessEntityID, htmlAttributes: new { @readonly= "readonly" })
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NameStyle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NameStyle)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Title)
+            @Html.TextBoxFor(model => model.Title, htmlAttributes: new { @readonly = "readonly" })
         </dd>
 
         <dt>
@@ -54,6 +43,15 @@
         <dd>
             @Html.DisplayFor(model => model.LastName)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Suffix)
         </dt>
@@ -69,23 +67,30 @@
         <dd>
             @Html.DisplayFor(model => model.EmailPromotion)
         </dd>
-    </dl>
 
-    @using (Ajax.BeginForm("Delete", new { Controller = "Personal", Area = "Personal" },
-                                            new AjaxOptions
-                                            {
-                                                HttpMethod = "Post",
-                                                InsertionMode = InsertionMode.Replace,
-                                                UpdateTargetId = "modal-body",
-                                                OnSuccess = "closeModal"
-                                            }))
-    {
-        @Html.AntiForgeryToken()
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalContactInfo)
+        </dt>
 
-        <div class="form-actions no-color">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <input type="submit" value="Delete" class="btn btn-default" /> 
-        </div>
-    }
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalContactInfo)
+        </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Demographics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demographics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rowguid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rowguid)
+        </dd>
+
+    </dl>    
 </div>

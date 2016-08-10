@@ -7,7 +7,7 @@ namespace WebDeveloper.DataAccess
         List<T> GetList();
         int Add(T entity);
         int Delete(T entity);
-        int Update(T entity);
-        int Count();
+        int Update(T entity);        
+        int count();
     }
 }

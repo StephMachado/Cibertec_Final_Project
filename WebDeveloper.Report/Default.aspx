@@ -6,16 +6,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>State Province Country Region Report</title>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" width="900px">
-            <LocalReport ReportPath="rptStateCountryRegion.rdlc">
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Width="900px">
+            <LocalReport ReportPath="report1.rdlc">
             </LocalReport>
         </rsweb:ReportViewer>
     
